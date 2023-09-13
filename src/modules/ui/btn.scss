@@ -1,20 +1,58 @@
-%btn__wrapper {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in 0s;
-}
+%btn {
+    &__wrapper {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in 0s;
+        line-height: 120%;
+    }
 
-%btn__simple__colors {
-    background: $ligthBlueColor;
-    color: $mainColor;
+    &__size {
+        &-regular {
+            min-height: 48px;
+            padding: 12px 32px;
+            border-radius: 8px;
+    
+            font-size: 20px;
+            line-height: 120%;
+            font-weight: 400;
+        }
+    
+        &-small {
+            min-height: 32px;
+            padding: 8px 24px;
+            border-radius: 4px;
+    
+            font-size: 14px;
+        }
+    }
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: $darkBlueColor;
-            color: #fff
+    &__color {
+        &-simple {
+            background: $ligthBlueColor;
+            color: $mainColor;
+        
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $darkBlueColor;
+                    color: #fff
+                }
+            }
+        }
+
+        &-outline {
+            background: transparent;
+            border: 1px solid $ligthBlueColor;
+            color: $mainColor;
+        
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $darkBlueColor;
+                    color: #fff;
+                }
+            }
         }
     }
 }
@@ -22,25 +60,25 @@
 ._btn {
     &__simple {
         @extend %btn__wrapper;
-        @extend %btn__simple__colors;
-
-        min-height: 48px;
-        padding: 12px 32px;
-        border-radius: 8px;
-
-        font-size: 20px;
-        line-height: 120%;
-        font-weight: 400;
+        @extend %btn__color-simple;
+        @extend %btn__size-regular;
 
         &-small {
             @extend %btn__wrapper;
-            @extend %btn__simple__colors;
-            
-            padding: 8px 24px;
-            min-height: 32px;
+            @extend %btn__color-simple;
+            @extend %btn__size-small;
+        }
+    }
 
-            font-size: 14px;
-            border-radius: 4px;
+    &__outline {
+        @extend %btn__wrapper;
+        @extend %btn__color-outline;
+        @extend %btn__size-regular;
+
+        &-small {
+            @extend %btn__wrapper;
+            @extend %btn__color-outline;
+            @extend %btn__size-small;
         }
     }
 

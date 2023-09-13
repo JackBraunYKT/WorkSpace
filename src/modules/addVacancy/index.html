@@ -1,0 +1,99 @@
+<section class="page__addVacancy addVacancy">
+    <div class="addVacancy__container _container">
+        <div class="addVacancy__body">
+            <h2 class="addVacancy__title">Создай свою вакансию</h2>
+            <form class="addVacancy__form" action="" method="post">
+                <fieldset class="addVacancy__fieldset">
+                    <div class="addVacancy__logo"></div>
+                    <button class="_btn__simple-small addVacancy__btn-logoDownload">+ загрузить лого</button>
+                </fieldset>
+                <div class="addVacancy__fieldset__group">
+                    <fieldset class="addVacancy__fieldset">
+                        <label class="addVacancy__label" for="companyName">Название компании</label>
+                        <input class="addVacancy__input" type="text" name="companyName" id="companyName" placeholder="Например: MICROSOFT">
+                    </fieldset>
+                    <fieldset class="addVacancy__fieldset">
+                        <label class="addVacancy__label" for="vacancyName">Название вакансии</label>
+                        <input class="addVacancy__input" type="text" name="vacancyName" id="vacancyName"
+                            placeholder="Например: Frontend-разработчик">
+                    </fieldset>
+                    <fieldset class="addVacancy__fieldset">
+                        <label class="addVacancy__label" for="salary">Заработная плата, руб/мес</label>
+                        <input class="addVacancy__input" type="text" name="salary" id="salary" placeholder="80 000">
+                    </fieldset>
+                    <fieldset class="addVacancy__fieldset">
+                        <label class="addVacancy__label" for="city">Город</label>
+                        <input class="addVacancy__input" type="text" name="city" id="cityField" placeholder="Например: Москва">
+                    </fieldset>
+                    <fieldset class="addVacancy__fieldset">
+                        <label class="addVacancy__label" for="email">E-mail</label>
+                        <input class="addVacancy__input" type="text" name="email" id="email" placeholder="Добавьте e-mail для связи">
+                    </fieldset>
+                </div>
+                <fieldset class="addVacancy__fieldset">
+                    <label class="addVacancy__label" for="description">Описание вакансии</label>
+                    <textarea class="addVacancy__input" name="description" id="description" placeholder="Добавьте всю необходимую для соискателя информацию"></textarea>
+                </fieldset>
+                <div class="addVacancy__checkboxes">
+                    <fieldset class="addVacancy__fieldset">
+                        <legend class="addVacancy__legend">Формат</legend>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="format" id="офис" value="офис">
+                            <label for="офис" class="addVacancy__label">Офис</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="format" id="удаленный" value="удаленный">
+                            <label for="удаленный" class="addVacancy__label">Удаленный</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="format" id="гибкий" value="гибкий">
+                            <label for="гибкий" class="addVacancy__label">Гибкий</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="addVacancy__fieldset">
+                        <legend class="addVacancy__legend">Опыт работы</legend>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="experience" id="опыт не важен" value="опыт не важен">
+                            <label for="опыт не важен" class="addVacancy__label">Не важно</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="experience" id="без опыта" value="без опыта">
+                            <label for="без опыта" class="addVacancy__label">Без опыта</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="experience" id="от 1 года до 3-х лет"
+                                value="от 1 года до 3-х лет">
+                            <label for="от 1 года до 3-х лет" class="addVacancy__label">От 1 года до 3-х лет</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="experience" id="от 3-х лет" value="от 3-х лет">
+                            <label for="от 3-х лет" class="addVacancy__label">От 3-х лет</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="addVacancy__fieldset">
+                        <legend class="addVacancy__legend">Занятость</legend>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="employment" id="полная" value="полная">
+                            <label for="полная" class="addVacancy__label">Полная</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="employment" id="частичная" value="частичная">
+                            <label for="частичная" class="addVacancy__label">Частичная</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="employment" id="стажировка" value="стажировка">
+                            <label for="стажировка" class="addVacancy__label">Стажировка</label>
+                        </div>
+                        <div class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="employment" id="проектная работа" value="Проектная работа">
+                            <label for="проектная работа" class="addVacancy__label">Проектная работа</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <button class="_btn__simple" type="submit">Добавить вакансию</button>
+            </form>
+        </div>
+    </div>
+</section>

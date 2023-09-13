@@ -94,15 +94,29 @@ body._lock {
   font-weight: 400;
   font-style: normal;
 }
-._btn__close, ._btn__simple-small, ._btn__simple {
+._btn__close, ._btn__outline-small, ._btn__outline, ._btn__simple-small, ._btn__simple {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-in 0s;
+  line-height: 120%;
 }
-
+._btn__outline, ._btn__simple {
+  min-height: 48px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 400;
+}
+._btn__outline-small, ._btn__simple-small {
+  min-height: 32px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+}
 ._btn__simple-small, ._btn__simple {
   background: #A6ADFF;
   color: #171717;
@@ -113,21 +127,18 @@ body._lock {
     color: #fff;
   }
 }
+._btn__outline-small, ._btn__outline {
+  background: transparent;
+  border: 1px solid #A6ADFF;
+  color: #171717;
+}
+@media (any-hover: hover) {
+  ._btn__outline-small:hover, ._btn__outline:hover {
+    background-color: #2A18FF;
+    color: #fff;
+  }
+}
 
-._btn__simple {
-  min-height: 48px;
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-size: 20px;
-  line-height: 120%;
-  font-weight: 400;
-}
-._btn__simple-small {
-  padding: 8px 24px;
-  min-height: 32px;
-  font-size: 14px;
-  border-radius: 4px;
-}
 ._btn__close {
   color: #CCCCCC;
   transition: color 0.3s ease 0s;
@@ -330,6 +341,10 @@ body._lock {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__action {
+  display: flex;
+  gap: 8px;
 }
 @media (max-width: 1023.98px) {
   .header__btn {

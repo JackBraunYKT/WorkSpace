@@ -30,6 +30,11 @@
             
         }
     }
+    // .header__action
+    &__action {
+        display: flex;
+        gap: 8px;
+    }
     // .header__btn
     &__btn {
         @media (max-width: ($md2 + px)) {
