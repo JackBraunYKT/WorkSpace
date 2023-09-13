@@ -1,0 +1,58 @@
+%btn__wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in 0s;
+}
+
+%btn__simple__colors {
+    background: $ligthBlueColor;
+    color: $mainColor;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $darkBlueColor;
+            color: #fff
+        }
+    }
+}
+
+._btn {
+    &__simple {
+        @extend %btn__wrapper;
+        @extend %btn__simple__colors;
+
+        min-height: 48px;
+        padding: 12px 32px;
+        border-radius: 8px;
+
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 400;
+
+        &-small {
+            @extend %btn__wrapper;
+            @extend %btn__simple__colors;
+            
+            padding: 8px 24px;
+            min-height: 32px;
+
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    }
+
+    &__close {
+        @extend %btn__wrapper;
+        color: $grayColor;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #171717;
+            }
+        }
+    }
+}

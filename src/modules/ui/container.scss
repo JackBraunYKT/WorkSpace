@@ -1,0 +1,19 @@
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0 72px;
+
+    @media (max-width: ($md2 + px)) {
+        @include adaptive-value('padding-left', 72, 44, $md2, $md3, 0);
+        @include adaptive-value('padding-right', 72, 44, $md2, $md3, 0);
+    }
+
+    @media (max-width: ($md3 + px)) {
+        @include adaptive-value('padding-left', 44, 15, $md3, $md4, 0);
+        @include adaptive-value('padding-right', 44, 15, $md3, $md4, 0);
+    }
+
+    @media (max-width: ($md4 + px)) {
+        padding: 0 15px;
+    }
+}

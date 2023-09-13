@@ -1,0 +1,85 @@
+.main-banner {
+    padding: 60px 0;
+
+    @media (max-width: ($md1+px)) {
+        @include adaptive-value('padding-top', 60, 48, $md1, $md2, 0);
+        @include adaptive-value('padding-bottom', 60, 48, $md1, $md2, 0);
+    }
+
+    @media (max-width: ($md2+px)) {
+        @include adaptive-value('padding-top', 48, 36, $md2, $md3, 0);
+        @include adaptive-value('padding-bottom', 48, 36, $md2, $md3, 0);
+    }
+
+    @media (max-width: ($md4+px)) {
+        padding-top: 16px;
+        padding-bottom: 40px;
+    }
+    // .main-banner__container
+    &__container {}
+    // .main-banner__body
+    &__body {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 330px;
+
+        @media (max-width: ($md1+px)) {
+            @include adaptive-value('height', 330, 260, $md1, $md2, 0);
+        }
+
+        @media (max-width: ($md2+px)) {
+            @include adaptive-value('height', 260, 204, $md2, $md3, 0);
+        }
+
+        @media (max-width: ($md4+px)) {
+            flex-direction: column;
+            height: 309px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -39px;
+            height: 100%;
+            width: 421px;
+            background: url('../img/laptop.png') no-repeat center/contain;
+    
+            @media (max-width: ($md1+px)) {
+                @include adaptive-value('width', 421, 340, $md1, $md2, 0);
+            }
+    
+            @media (max-width: ($md2+px)) {
+                @include adaptive-value('width', 340, 269, $md2, $md3, 0);
+            }
+    
+            @media (max-width: ($md4+px)) {
+                position: inherit;
+                right: inherit;
+                width: 269px;
+                bottom: -12px
+            }
+        }
+    }
+    // .main-banner__title
+    &__title {
+        font-size: 90px;
+        text-transform: uppercase;
+        line-height: 120%;
+
+        @media (max-width: ($md1+px)) {
+            @include adaptive-value('font-size', 90, 64, $md1, $md2, 0);
+        }
+
+        @media (max-width: ($md2+px)) {
+            @include adaptive-value('font-size', 64, 52, $md2, $md3, 0);
+        }
+
+        @media (max-width: ($md4+px)) {
+            font-size: 32px;
+            text-align: center;            
+        }
+    }
+}

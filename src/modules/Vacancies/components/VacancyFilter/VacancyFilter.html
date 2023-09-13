@@ -1,0 +1,83 @@
+<section class="vacancies__filter filter">
+    <h2 class="filter__title">Фильтр</h2>
+    <form class="filter__form">
+        <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Город</legend>
+            <select class="filter__select" name="city" id="city">
+                <option value="" disabled selected class="selected__placeholder">Выбрать город</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="filter__fieldset salary">
+            <legend class="filter__legend">Заработная плата (₽)</legend>
+            <div class="filter__range">
+                <input type="number" class="filter__input" name="pay-from" placeholder="от" min="0">
+                <input type="number" class="filter__input" name="pay-to" placeholder="до" min="0">
+            </div>
+        </fieldset>
+
+        <div class="filter__checkboxes">
+            <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Формат</legend>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="format" id="офис" value="офис">
+                    <label for="офис" class="filter__label">Офис</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="format" id="удаленный" value="удаленный">
+                    <label for="удаленный" class="filter__label">Удаленный</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="format" id="гибкий" value="гибкий">
+                    <label for="гибкий" class="filter__label">Гибкий</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Опыт работы</legend>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="experience" id="опыт не важен" value="опыт не важен">
+                    <label for="опыт не важен" class="filter__label">Не важно</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="experience" id="без опыта" value="без опыта">
+                    <label for="без опыта" class="filter__label">Без опыта</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="experience" id="от 1 года до 3-х лет" value="от 1 года до 3-х лет">
+                    <label for="от 1 года до 3-х лет" class="filter__label">От 1 года до 3-х лет</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="experience" id="от 3-х лет" value="от 3-х лет">
+                    <label for="от 3-х лет" class="filter__label">От 3-х лет</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Занятость</legend>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="employment" id="полная" value="полная">
+                    <label for="полная" class="filter__label">Полная</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="employment" id="частичная" value="частичная">
+                    <label for="частичная" class="filter__label">Частичная</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="employment" id="стажировка" value="стажировка">
+                    <label for="стажировка" class="filter__label">Стажировка</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="employment" id="проектная работа" value="Проектная работа">
+                    <label for="проектная работа" class="filter__label">Проектная работа</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="filter__btns">
+            <button type="submit" class="filter__btn _btn__simple-small">Применить</button>
+            <button type="reset" class="filter__reset">Очистить</button>
+        </div>
+    </form>
+    
+</section>

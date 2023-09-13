@@ -1,0 +1,60 @@
+// ============================ Global value ============================
+$fontFamily: 'Inter';
+$fontSize: 14px;
+
+$mainColor: #171717;
+$fillColor: #F3F4F8;
+$darkBlueColor: #2A18FF;
+$ligthBlueColor: #A6ADFF;
+$hoverColor: #F9FAFF;
+$cardTitleFill: #EAECFF;
+$whiteColor: #FFFFFF;
+$grayColor: #CCCCCC;
+
+$maxWidth: 1440;
+$minWidth: 320;
+$maxWidthContainer: 1324;
+
+$md1: 1439.98;
+$md2: 1023.98;
+$md3: 767.98;
+$md4: 479.98;
+// ======================================================================
+
+// ============================= nullstyle ==============================
+@import "./modules/scss/nullstyle.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $mainColor;
+    background-color: $fillColor;
+    &._lock {
+        overflow: hidden;
+    }
+}
+// ======================================================================
+
+// ============================== imports ===============================
+@import url('https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css');
+@import "./modules/scss/fonts";
+@import "./modules/helpers/mixins";
+@import "./modules/UI/index";
+@import "./modules/header/style";
+@import "./modules/MainBanner/style";
+@import "./modules/vacancies/style";
+@import "./modules/footer/style";
+// ======================================================================
+
+// ================================ main ================================
+.page {
+    // .page__main-banner
+    &__main-banner {}
+    // .page__vacancies
+    &__vacancies {}
+}
+// ======================================================================

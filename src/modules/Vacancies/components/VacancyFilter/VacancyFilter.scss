@@ -1,0 +1,114 @@
+.filter {
+    position: relative;
+    flex: 0 0 280px;
+
+    @media (max-width: ($md2+px)) {
+        flex: auto;
+        display: none;
+        height: 0;
+        opacity: 0;
+        transition: height 0.3s ease-in 0s;
+
+        &.isOpen {
+            display: block;
+            height: auto;
+            opacity: 1;
+        }
+    }
+
+    // .filter__title
+    &__title {
+        font-size: 20px;
+        @media (max-width: ($md2+px)) {
+            display: none;
+        }
+    }
+    // .filter__form
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    // .fitler__fieldset
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        @media (max-width: ($md3+px)) {
+            margin-top: 24px;
+        }
+
+        &.salary {
+            align-self: flex-start;
+            width: 280px;
+
+            @media (max-width: ($md4+px)) {
+                align-self: auto;
+                width: auto;
+            }
+        }
+    }
+    // .filter__legend
+    &__legend {
+        margin-bottom: 12px;
+    }
+
+    &__select {
+        // width: 100%;
+    }
+    // .filter__range
+    &__range {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px
+    }
+    // .filter__input
+    &__input {
+        border-radius: 4px;
+        padding: 0 16px;
+        min-height: 32px;
+        border: none;
+        flex: 1 1 50%;
+        width: 100%;
+    }
+    &__input::placeholder {
+        color: $grayColor;
+    }
+
+    // .filter__checkboxes
+    &__checkboxes {
+        .checkbox:not(:first-of-type) {
+            margin-top: 8px;
+        }
+        @media(max-width: ($md2+px)) {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px
+        }
+        @media (max-width: ($md4+px)) {
+            flex-direction: column;
+        }
+    }
+    // .filter__label
+    &__label {}
+    // .filter__btns
+    &__btns {
+        margin-top: 32px;
+        @media (max-width: ($md2+px)) {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+    }
+    
+    // .filter__reset
+    &__reset {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        color: $grayColor;
+        @media (max-width: ($md2+px)) {
+            position: inherit;
+        }
+    }
+}

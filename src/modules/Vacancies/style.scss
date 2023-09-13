@@ -1,0 +1,73 @@
+.vacancies {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    @media (max-width: ($md1+px)) {
+        @include adaptive-value('padding-top', 40, 32, $md1, $md2, 0);
+        @include adaptive-value('padding-bottom', 60, 48, $md1, $md2, 0);
+    }
+
+    @media (max-width: ($md2+px)) {
+        @include adaptive-value('padding-top', 32, 24, $md2, $md3, 0);
+        @include adaptive-value('padding-bottom', 48, 36, $md2, $md3, 0);
+    }
+
+    @media (max-width: ($md3+px)) {
+        padding-top: 24px;
+        @include adaptive-value('padding-bottom', 36, 16, $md3, $md4, 0);
+    }
+
+    @media (max-width: ($md4+px)) {
+        padding-bottom: 16px;
+    }
+
+    // .vacancies__container
+    &__container {}
+    // .vacancies__body
+    &__body {
+        display: flex;
+        align-items: start;
+
+        @media(max-width: ($md2+px)) {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+    // .vacancies__filter-btn
+    &__filter-btn {
+        display: none;
+        font-size: 14px;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../img/arrow-filter.svg) no-repeat center/contain;
+            border: none;
+            margin-top: 0;
+            transition: transform 0.3s ease-in 0s;
+        }
+
+        &.isOpen::after {
+            margin-top: 0;
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: ($md2+px)) {
+            display: flex;
+            align-self: flex-start;
+            align-items: center;
+            color: $darkBlueColor;
+        }
+    }
+    // .vacancies__filter
+    &__filter {}
+    // .vacancies__cards
+    &__cards {}
+}
+
+@import "./components/VacancyFilter/VacancyFilter";
+@import "./components/VacancyCards/VacancyCards";
+@import "./components/VacancyCard/VacancyCard";
+@import "./components/VacancyModal/VacancyModal";

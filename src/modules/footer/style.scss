@@ -1,0 +1,54 @@
+.footer {
+    padding: 40px 0;
+
+    @media (max-width: ($md1+px)) {
+        @include adaptive-value('padding-top', 40, 32, $md1, $md2, 0); 
+        @include adaptive-value('padding-bottom', 40, 32, $md1, $md2, 0);      
+    }
+
+    @media (max-width: ($md2+px)) {
+        @include adaptive-value('padding-top', 32, 24, $md2, $md3, 0); 
+        @include adaptive-value('padding-bottom', 32, 24, $md2, $md3, 0);      
+    }
+
+    @media (max-width: ($md3+px)) {
+        padding: 24px 0;
+    }
+
+    // .footer__container
+    &__container {}
+    // .footer__body
+    &__body {}
+    // .footer__logo
+    &__logo {}
+    // .footer__copyright
+    &__copyright {}
+
+    ._logo {
+        // ._logo__first-word
+        &__first-word {
+            color: $ligthBlueColor;
+        }
+    }
+}
+
+
+.copyright-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 27px;
+
+    @media (max-width: ($md4+px)) {
+        margin-top: 16px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    // .copyright-footer__column
+    &__column {}
+    // .copyright-footer__info
+    &__info:not(:first-child) {
+        margin-top: 8px;
+    }
+}

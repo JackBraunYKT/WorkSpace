@@ -1,0 +1,14 @@
+._logo {
+    font-size: 20px;
+    line-height: 120%;
+
+    &::before {
+        padding-right: 7.25px;
+        display: inline;
+    }
+
+    &__first-word {
+        color: $darkBlueColor;
+        font-weight: 600;
+    }
+}

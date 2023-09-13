@@ -1,0 +1,46 @@
+.vacancy-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+
+    &:focus {
+        outline: 2px solid $ligthBlueColor;
+        outline-offset: 2px;
+    }
+
+    // .vacancy__logo
+    &__logo {
+        height: 44px;
+    }
+    // .vacancy__company
+    &__company {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    // .vacancy__title
+    &__title {
+        margin-top: 8px;
+        background: $cardTitleFill;
+        padding: 3px 5px;
+        border-radius: 4px;
+    }
+    // .vacancy__list
+    &__list {
+        margin-top: 8px;
+        line-height: 120%;
+    }
+    // .vacancy__field
+    &__field {
+        color: $grayColor;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $hoverColor;
+        }
+    }
+}
